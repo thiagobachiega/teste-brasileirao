@@ -11,7 +11,7 @@ const GetApi = async () => {
       'https://api.api-futebol.com.br/v1/campeonatos/14/rodadas/1',
       {
         headers: {
-          Authorization: `Bearer ${keyTeste}`,
+          Authorization: `Bearer ${keyLive}`,
         },
       }
     )

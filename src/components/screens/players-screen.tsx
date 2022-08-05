@@ -14,8 +14,8 @@ const PlayersScreen: React.FC<PlayersScreenProps> = () => {
       ) : (
         data?.map((player) => (
           <Column className="w-1/6 bg-white rounded-lg">
-            <div className="h-24">
-              <img src="#"></img>
+            <div className="h-24 overflow-hidden">
+              <img className='h-24 rounded-lg' src="https://yt3.ggpht.com/qB-nQZG1GLBnnMRmaFBMc_BRM96i9RaDyoxvxs6WRuQE6UHWO1IsqqDTgHivNFv2-Qmp_NCP5A=s900-c-k-c0x00ffffff-no-rj"></img>
             </div>
             <Column>
               {player.atleta.nome_popular}

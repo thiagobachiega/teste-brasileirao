@@ -6,7 +6,6 @@ import Flex from '../toolkit/flex'
 export interface GamesScreenProps {}
 const GamesScreen = () => {
   const { data, isLoading } = useGetApi()
-  const [showModal, setShowModal] = React.useState(false)
 
   return (
     <div>
@@ -16,8 +15,7 @@ const GamesScreen = () => {
         ) : (
           data?.partidas?.map((partida) => (
             <Flex
-              onClick={() => setShowModal(true)}
-              className="p-2 bg-white hover:bg-gray-50 cursor-pointer"
+              className="p-2 bg-white hover:bg-gray-200 cursor-pointer"
             >
               <Column className="pr-2 py-8 border-r-2 border-gray-100">
                 <Flex className="gap-4">
@@ -46,11 +44,6 @@ const GamesScreen = () => {
           ))
         )}
       </div>
-      {showModal ? (
-        <Flex className="bg-gray-500 fixed w-2/4 h-2/4">
-          <button onClick={() => {setShowModal(false)}} className='absolute right-[-10px] top-[-10px] w-10 h-10'>X</button>
-        </Flex>
-      ) : null}
     </div>
   )
 }
