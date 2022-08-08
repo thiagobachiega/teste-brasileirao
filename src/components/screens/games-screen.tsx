@@ -7,6 +7,7 @@ export interface GamesScreenProps {}
 const GamesScreen = () => {
   const { data, isLoading } = useGetApi()
 
+
   return (
     <div>
       <div className="grid grid-cols-2 bg-gray-100 gap-[2px] border-2">

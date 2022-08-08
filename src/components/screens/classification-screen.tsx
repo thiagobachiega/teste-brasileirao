@@ -18,7 +18,7 @@ const ClassificationScreen: React.FC<ClassificationScreenProps> = () => {
           </button>
         </Flex>
       </div>
-      <div className='p-2'>
+      <div className="p-2">
         <table className="w-full">
           <tr className="text-sm">
             <th className="font-normal w-2/4 text-start pl-4">Clube</th>
@@ -35,9 +35,9 @@ const ClassificationScreen: React.FC<ClassificationScreenProps> = () => {
           {isLoading
             ? null
             : data?.map((team) => (
-                <tr className="space-y-4">
+                <tr className="space-y-4 h-10 text-center">
                   <td className="flex gap-4 pl-4">
-                    <span className='w-5'>{team.posicao}</span>
+                    <span className="w-5">{team.posicao}</span>
                     <img className="w-6" src={team.time.escudo}></img>
                     <span>{team.time.nome_popular}</span>
                   </td>
@@ -49,7 +49,7 @@ const ClassificationScreen: React.FC<ClassificationScreenProps> = () => {
                   <td>{team.gols_pro}</td>
                   <td>{team.gols_contra}</td>
                   <td>{team.saldo_gols}</td>
-                  <td className="flex justify-center">{team.ultimos_jogos}</td>
+                  <td className="text-center">{team.ultimos_jogos}</td>
                 </tr>
               ))}
         </table>
